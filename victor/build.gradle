@@ -17,9 +17,9 @@
 plugins {
     id 'java-gradle-plugin'
     id "com.gradle.plugin-publish" version "0.13.0"
+    id 'maven-publish'
+    id 'groovy'
 }
-
-apply plugin: 'groovy'
 
 dependencies {
     implementation gradleApi()
@@ -30,8 +30,6 @@ dependencies {
 test {
     testLogging.showStandardStreams = true
 }
-
-apply plugin: 'maven'
 
 repositories {
     mavenCentral()
@@ -44,7 +42,7 @@ dependencies {
     implementation 'org.apache.xmlgraphics:batik-anim:1.12'
     implementation 'org.apache.xmlgraphics:xmlgraphics-commons:2.4'
     implementation 'com.romainpiel.svgtoandroid:svgtoandroid:0.1.0'
-    testImplementation 'junit:junit:4.13'
+    testImplementation 'junit:junit:4.13.1'
 }
 
 // Plugin publishing
